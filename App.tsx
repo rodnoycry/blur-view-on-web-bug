@@ -8,9 +8,10 @@ export default function App() {
         style={[
           styles.blur,
           {
-            backgroundColor: "#ff0000", // explicitly set background color of BlurView to red
+            backgroundColor: "#ff000060", // explicitly set background color of BlurView to red
           },
         ]}
+        experimentalBlurMethod="dimezisBlurView"
       />
       <View style={styles.container}>
         {/* Some stripes to show blur effect better */}
@@ -39,12 +40,14 @@ const styles = StyleSheet.create({
   },
   blur: {
     position: "absolute",
-    top: 100,
-    right: 100,
-    bottom: 100,
-    left: 100,
+    top: 50,
+    right: 50,
+    bottom: 50,
+    left: 50,
     zIndex: 100,
+    elevation: 100,
     borderRadius: 100,
+    overflow: "hidden",
   },
   stripe: {
     width: 30,
